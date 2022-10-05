@@ -13,12 +13,10 @@ import (
 // https://github.com/go-redis/redis
 // 单机模式
 
-type GoLibRedis = *redis.Client
-
 var redisOnce sync.Once
-var redisNew GoLibRedis
+var redisNew Client
 
-func NewRedis() GoLibRedis {
+func NewRedis() Client {
 	redisOnce.Do(func() {
 		ipAndPort := fmt.Sprintf("%s:%d", config.Config.GetRedis().GetHost(), config.Config.GetRedis().GetPort())
 		redisNew = redis.NewClient(&redis.Options{

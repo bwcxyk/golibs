@@ -18,4 +18,10 @@ const (
 
 	// EnvDev 开发环境
 	EnvDev string = "dev"
+
+	// TypeRedis 单机模式
+	TypeRedis string = "redis"
+
+	// TypeRedisCluster 集群模式
+	TypeRedisCluster string = "redis_cluster"
 )

@@ -12,12 +12,10 @@ import (
 // https://github.com/go-redis/redis
 // 集群模式
 
-type GoLibRedisCluster = *redis.ClusterClient
-
 var redisClusterOnce sync.Once
-var redisClusterNew GoLibRedisCluster
+var redisClusterNew Client
 
-func NewRedisCluster() GoLibRedisCluster {
+func NewRedisCluster() Client {
 	redisClusterOnce.Do(func() {
 		redisClusterNew = redis.NewClusterClient(&redis.ClusterOptions{
 			DialTimeout:  10 * time.Second,
