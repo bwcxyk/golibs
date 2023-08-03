@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/it-sos/golibs/core"
-	"github.com/it-sos/golibs/global/consts"
+	"github.com/bwcxyk/golibs/core"
+	"github.com/bwcxyk/golibs/global/consts"
 )
 
 var (

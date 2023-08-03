@@ -6,7 +6,7 @@ import (
 	"errors"
 	"net/url"
 
-	"github.com/it-sos/golibs/utils/crypt"
+	"github.com/bwcxyk/golibs/utils/crypt"
 )
 
 // aesSha1prng 模拟 java SHA1PRNG 处理

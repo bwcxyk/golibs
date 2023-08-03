@@ -3,7 +3,7 @@ package core
 import (
 	"os"
 
-	"github.com/it-sos/golibs/global/consts"
+	"github.com/bwcxyk/golibs/global/consts"
 )
 
 func GetDevBasePath() string {

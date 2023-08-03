@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/bwcxyk/golibs/config"
+	"github.com/bwcxyk/golibs/global/consts"
 	"github.com/go-xorm/xorm"
-	"github.com/it-sos/golibs/config"
-	"github.com/it-sos/golibs/global/consts"
 	_ "github.com/mattn/go-sqlite3"
 )
 

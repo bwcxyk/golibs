@@ -13,7 +13,7 @@ package minio
 import (
 	"sync"
 
-	"github.com/it-sos/golibs/config"
+	"github.com/bwcxyk/golibs/config"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 )

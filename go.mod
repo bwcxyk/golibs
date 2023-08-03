@@ -1,4 +1,4 @@
-module github.com/it-sos/golibs
+module github.com/bwcxyk/golibs
 
 go 1.19
 
@@ -8,15 +8,17 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/go-xorm/xorm v0.7.9
-	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/google/uuid v1.3.0
+	github.com/bwcxyk/golibs v1.0.2
 	github.com/kataras/golog v0.1.7
 	github.com/kataras/iris/v12 v12.2.0-beta5.0.20220922222847-4cd062101834
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/magiconair/properties v1.8.6
 	github.com/mattn/go-sqlite3 v1.14.15
 	github.com/minio/minio-go/v7 v7.0.37
+	github.com/mitchellh/mapstructure v1.5.0
 	github.com/mojocn/base64Captcha v1.3.5
+	github.com/sijms/go-ora/v2 v2.7.11
 	github.com/spf13/viper v1.13.0
 	golang.org/x/net v0.0.0-20220921203646-d300de134e69
 )
@@ -37,13 +39,13 @@ require (
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
+	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/gorilla/css v1.0.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/iris-contrib/jade v1.1.4 // indirect
 	github.com/iris-contrib/schema v0.0.6 // indirect
-	github.com/jonboulle/clockwork v0.3.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kataras/blocks v0.0.6 // indirect
@@ -59,7 +61,6 @@ require (
 	github.com/microcosm-cc/bluemonday v1.0.20 // indirect
 	github.com/minio/md5-simd v1.1.2 // indirect
 	github.com/minio/sha256-simd v1.0.0 // indirect
-	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml v1.9.5 // indirect

@@ -7,8 +7,8 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
-	"github.com/it-sos/golibs/config"
-	"github.com/it-sos/golibs/global/consts"
+	"github.com/bwcxyk/golibs/config"
+	"github.com/bwcxyk/golibs/global/consts"
 )
 
 // https://github.com/go-xorm/xorm

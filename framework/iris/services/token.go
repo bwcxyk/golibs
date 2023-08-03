@@ -17,9 +17,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/it-sos/golibs/cerrors"
-	"github.com/it-sos/golibs/config"
-	"github.com/it-sos/golibs/utils/crypt/aes"
+	"github.com/bwcxyk/golibs/cerrors"
+	"github.com/bwcxyk/golibs/config"
+	"github.com/bwcxyk/golibs/utils/crypt/aes"
 )
 
 func GetLoginId(token string) (loginId string, err error) {

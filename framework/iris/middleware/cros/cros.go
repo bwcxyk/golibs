@@ -3,9 +3,9 @@ package cros
 import (
 	"strings"
 
-	"github.com/it-sos/golibs/config"
-	"github.com/it-sos/golibs/framework/iris/bootstrap"
-	"github.com/it-sos/golibs/utils/array"
+	"github.com/bwcxyk/golibs/config"
+	"github.com/bwcxyk/golibs/framework/iris/bootstrap"
+	"github.com/bwcxyk/golibs/utils/array"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/middleware/accesslog"
 )

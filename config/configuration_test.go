@@ -27,6 +27,14 @@ func TestGetMysql(t *testing.T) {
 	t.Log(Config.GetMysql()["slave1"].GetHost())
 }
 
+func TestGetOracle(t *testing.T) {
+	t.Log(Config.GetOracle().GetHost())
+	t.Log(Config.GetOracle().GetPort())
+	t.Log(Config.GetOracle().GetUsername())
+	t.Log(Config.GetOracle().GetPassword())
+	t.Log(Config.GetOracle().GetDbname())
+}
+
 func TestGetSqlite(t *testing.T) {
 	t.Log(GetSqlite().GetTimezone())
 	t.Log(GetSqlite().GetStorageFile())

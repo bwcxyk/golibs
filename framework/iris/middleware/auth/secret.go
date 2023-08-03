@@ -11,7 +11,7 @@
 package auth
 
 import (
-	"github.com/it-sos/golibs/framework/iris/services"
+	"github.com/bwcxyk/golibs/framework/iris/services"
 	"github.com/kataras/iris/v12"
 )
 

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/it-sos/golibs/db/redis"
-	"github.com/it-sos/golibs/utils/random"
+	"github.com/bwcxyk/golibs/db/redis"
+	"github.com/bwcxyk/golibs/utils/random"
 	"golang.org/x/net/context"
 )
 

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/it-sos/golibs/db/redis"
+	"github.com/bwcxyk/golibs/db/redis"
 	"golang.org/x/net/context"
 )
 

@@ -13,8 +13,8 @@ package es
 import (
 	"sync"
 
+	"github.com/bwcxyk/golibs/config"
 	"github.com/elastic/go-elasticsearch/v7"
-	"github.com/it-sos/golibs/config"
 )
 
 var esOnce sync.Once

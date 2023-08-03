@@ -12,14 +12,13 @@ package config
 
 import (
 	"fmt"
+	"github.com/bwcxyk/golibs/global/variable"
+	"github.com/bwcxyk/golibs/utils/reflects"
+	"github.com/mitchellh/mapstructure"
+	"github.com/spf13/viper"
 	"reflect"
 	"strconv"
 	"strings"
-
-	"github.com/goinggo/mapstructure"
-	"github.com/it-sos/golibs/global/variable"
-	"github.com/it-sos/golibs/utils/reflects"
-	"github.com/spf13/viper"
 )
 
 // ConfigurationReadOnly web 应用基础配置
@@ -43,6 +42,7 @@ type ConfigurationReadOnly interface {
 	GetCrosAllowHeaders() string
 	GetEs() []string
 	GetMysql() map[string]IMysql
+	GetOracle() IOracle
 	GetRedis() IRedis
 }
 
@@ -56,6 +56,7 @@ type Configuration struct {
 	SwaggerPort      string `yaml:"swagger.port"`
 	Es               string `yaml:"es"`
 	Mysql            string `yaml:"mysql"`
+	Oracle           string `yaml:"oracle"`
 	Redis            string `yaml:"redis"`
 	RedisUse         string `yaml:"redis_use"`
 	CryptAesToken    string `yaml:"crypt.aes.token"`
@@ -180,6 +181,66 @@ func (c Configuration) GetRedis() IRedis {
 	}
 	return redisAlone
 }
+
+// oracle配置实例
+var oracleAlone IOracle
+
+func (c Configuration) GetOracle() IOracle {
+	if oracleAlone == nil {
+		v := viper.GetStringMapString(c.Oracle)
+		o := oracle{}
+		if err := mapstructure.Decode(v, &o); err != nil {
+			panic(err)
+		}
+		oracleAlone = o
+	}
+	return oracleAlone
+}
+
+// oracle配置
+type oracle struct {
+	Host string
+	//Port     int
+	Port     string
+	Username string
+	Password string
+	Dbname   string
+}
+
+func (o oracle) GetHost() string {
+	return o.Host
+}
+
+//func (o oracle) GetPort() int {
+//	return o.Port
+//}
+
+func (o oracle) GetPort() int {
+	port, _ := strconv.Atoi(o.Port)
+	return port
+}
+
+func (o oracle) GetUsername() string {
+	return o.Username
+}
+
+func (o oracle) GetPassword() string {
+	return o.Password
+}
+
+func (o oracle) GetDbname() string {
+	return o.Dbname
+}
+
+type IOracle interface {
+	GetHost() string
+	GetPort() int
+	GetUsername() string
+	GetPassword() string
+	GetDbname() string
+}
+
+var _ IOracle = (*oracle)(nil)
 
 // mysql mysql配置
 type mysql struct {

@@ -3,7 +3,7 @@ package captcha
 import (
 	"time"
 
-	"github.com/it-sos/golibs/db/redis"
+	"github.com/bwcxyk/golibs/db/redis"
 	"github.com/mojocn/base64Captcha"
 	"golang.org/x/net/context"
 )

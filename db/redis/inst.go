@@ -3,9 +3,9 @@ package redis
 import (
 	"io"
 
+	"github.com/bwcxyk/golibs/config"
+	"github.com/bwcxyk/golibs/global/consts"
 	"github.com/go-redis/redis/v8"
-	"github.com/it-sos/golibs/config"
-	"github.com/it-sos/golibs/global/consts"
 )
 
 // Client redis interface

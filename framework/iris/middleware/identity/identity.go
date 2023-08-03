@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/it-sos/golibs/framework/iris/bootstrap"
+	"github.com/bwcxyk/golibs/framework/iris/bootstrap"
 	"github.com/kataras/golog"
 	"github.com/kataras/iris/v12"
 )
