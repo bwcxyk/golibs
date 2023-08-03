@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/go-xorm/xorm"
 	"github.com/bwcxyk/golibs/config"
 	"github.com/bwcxyk/golibs/global/consts"
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/go-xorm/xorm"
 )
 
 // https://github.com/go-xorm/xorm

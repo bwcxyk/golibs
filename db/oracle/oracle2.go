@@ -11,7 +11,7 @@ import (
 	go_ora "github.com/sijms/go-ora/v2"
 )
 
-func connectToDatabase() (*sql.DB, error) {
+func ConnectToDatabase() (*sql.DB, error) {
 	dsn := go_ora.BuildUrl(
 		config.Config.GetOracle().GetHost(),
 		config.Config.GetOracle().GetPort(),
@@ -33,7 +33,7 @@ func connectToDatabase() (*sql.DB, error) {
 	return db, nil
 }
 
-func queryDatabase(db *sql.DB, query string) {
+func QueryDatabase(db *sql.DB, query string) {
 	// 执行查询
 	rows, _ := db.Query(query)
 	defer func(rows *sql.Rows) {
