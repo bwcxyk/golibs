@@ -13,7 +13,7 @@ import (
 
 func TestDb2(t *testing.T) {
 	// 连接数据库
-	db, err := connectToDatabase()
+	db, err := ConnectToDatabase()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -23,5 +23,5 @@ func TestDb2(t *testing.T) {
 		}
 	}(db)
 
-	queryDatabase(db, "select sysdate from dual")
+	QueryDatabase(db, "select sysdate from dual")
 }
