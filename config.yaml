@@ -58,6 +58,14 @@ crypt:
       11lv0VjsOnH6189jBWTxtI+SFBmP4GYNNUh9mr+nXA==
       -----END RSA PRIVATE KEY-----
 
+# oracle
+oracle:
+  host: 127.0.0.1
+  port: 1521
+  username: scott
+  password: tiger
+  dbname: orcl
+
 # mysql
 mysql:
   master:
@@ -87,14 +95,14 @@ redis_use: redis_cluster
 redis:
   host: 127.0.0.1
   port: 6379
-  username:
-  password:
+  username: default
+  password: redis
   db: 0
 
 # redis cluster
 redis_cluster:
-  username:
-  password:
+  username: default
+  password: redis
   hosts:
     - "127.0.0.1:7001"
     - "127.0.0.1:7002"
