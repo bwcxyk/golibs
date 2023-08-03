@@ -20,8 +20,8 @@ func TestDb2(t *testing.T) {
 	defer func(db *sql.DB) {
 		err := db.Close()
 		if err != nil {
-
 		}
 	}(db)
-	queryDatabase(db, "select * from dual")
+
+	queryDatabase(db, "select sysdate from dual")
 }
